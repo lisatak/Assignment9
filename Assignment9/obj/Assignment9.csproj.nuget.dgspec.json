@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\lctak\\Documents\\test\\Assignment9\\Assignment9.csproj": {}
+    "C:\\Users\\lctak\\Documents\\GitHub\\Assignment9\\Assignment9\\Assignment9.csproj": {}
   },
   "projects": {
-    "C:\\Users\\lctak\\Documents\\test\\Assignment9\\Assignment9.csproj": {
+    "C:\\Users\\lctak\\Documents\\GitHub\\Assignment9\\Assignment9\\Assignment9.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\lctak\\Documents\\test\\Assignment9\\Assignment9.csproj",
+        "projectUniqueName": "C:\\Users\\lctak\\Documents\\GitHub\\Assignment9\\Assignment9\\Assignment9.csproj",
         "projectName": "Assignment9",
-        "projectPath": "C:\\Users\\lctak\\Documents\\test\\Assignment9\\Assignment9.csproj",
+        "projectPath": "C:\\Users\\lctak\\Documents\\GitHub\\Assignment9\\Assignment9\\Assignment9.csproj",
         "packagesPath": "C:\\Users\\lctak\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\lctak\\Documents\\test\\Assignment9\\obj\\",
+        "outputPath": "C:\\Users\\lctak\\Documents\\GitHub\\Assignment9\\Assignment9\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\lctak\\AppData\\Roaming\\NuGet\\NuGet.Config",

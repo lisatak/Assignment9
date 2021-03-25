@@ -26,6 +26,7 @@ namespace Assignment9
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            //make sure we can use the sqlite database
             services.AddDbContext<MoviesDbContext>(options =>
             {
                 options.UseSqlite(Configuration["ConnectionStrings:MoviesConnection"]);
