@@ -1,0 +1,58 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Movie Collection";
+}
+<!--Pass in list of movies from controller-->
+@model IEnumerable<Movies>
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Category</th>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Director</th>
+            <th>Rating</th>
+            <th>Edited</th>
+            <th>Lent To</th>
+            <th>Notes</th>
+            <th></th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var x in Model)
+        {
+            <!--Make sure Independence Day does not get displayed-->
+            @if (x.Title != "Independence Day")
+            {
+                <tr>
+                    <td>@x.Category</td>
+                    <td>@x.Title</td>
+                    <td>@x.Year</td>
+                    <td>@x.Director</td>
+                    <td>@x.Rating</td>
+                    <td>@x.Edited</td>
+                    <td>@x.Lent</td>
+                    <td>@x.Notes</td>
+                    <td>
+                        <!--button calls edit movie post action-->
+                        <form asp-action="EditMovie" method="post">
+                            <input type="hidden" value="@x.MovieId" name="movieId" />
+                            <button type="submit">Edit</button>
+                        </form>
+                    </td>
+                    <td>
+                        <!--button calls delete movie post action-->
+                        <form asp-action="DeleteMovie" method="post">
+                            <input type="hidden" value="@x.MovieId" name="movieId" />
+                            <button type="submit">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        }
+    </tbody>
+</table>

@@ -1,0 +1,62 @@
+﻿@*
+*@
+@{
+    ViewBag.Title = "New Movie";
+}
+
+<!--Pass in movies to create a new movie object-->
+@model Movies 
+
+<form asp-action="MovieForm" method="post">
+    <div>
+        <label asp-for="Category">Category</label>
+        <input asp-for="Category"/>
+    </div>
+
+    <div>
+        <label asp-for="Title">Title</label>
+        <input asp-for="Title"/>
+    </div>
+
+    <div>
+        <label asp-for="Year">Year</label>
+        <input asp-for="Year"/>
+    </div>
+
+    <div>
+        <label asp-for="Director">Director</label>
+        <input asp-for="Director"/>
+    </div>
+
+    <div>
+        <label asp-for="Rating">Rating</label>
+        <select asp-for="Rating">
+            <option value="">Select One</option>
+            <option value="G">G</option>
+            <option value="PG">PG</option>
+            <option value="PG-13">PG-13</option>
+            <option value="R">R</option>
+        </select>
+    </div>
+
+    <div>
+        <label asp-for="Edited">Edited</label>
+        <select asp-for="Edited">
+            <option value="False">No</option>
+            <option value="True">Yes</option>
+        </select>
+    </div>
+
+    <div>
+        <label asp-for="Lent">Lent To</label>
+        <input asp-for="Lent"/>
+    </div>
+
+    <div>
+        <label asp-for="Notes">Notes</label>
+        <input asp-for="Notes"/>
+    </div>
+    <br />
+    <button type="submit">Add Movie</button>
+    <div asp-validation-summary="All"></div>
+</form>

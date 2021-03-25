@@ -1,0 +1,27 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Successfully added " + Model.Title + ".";
+}
+
+@model Assignment9.Models.Movies
+
+<div>
+    <!--Judge hard if independence day is entered-->
+    @if (Model.Title == "Independence Day")
+    {
+        @:Interesting...
+    }
+    else
+    {
+        <!--happily oblige for any other film-->
+        @:Okay!
+    }
+</div>
+
+<!--link to movie collection page-->
+<div>
+    Click <a asp-action="MovieCollection">here</a> to see the movie collection.
+</div>
+

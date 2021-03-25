@@ -1,0 +1,67 @@
+﻿@*
+*@
+@{
+    ViewBag.Title = "Edit Movie";
+}
+<!--Passing in specific movie from controller-->
+@model Movies
+
+<!--Form-->
+<form asp-action="SaveEdit" method="post">
+
+    <!--hidden input to keep the same movie id-->
+    <input type="hidden" asp-for="MovieId" name="movieId" value="@Model.MovieId" />
+
+    <!--Display original data in text boxes-->
+    <div>
+        <label asp-for="Category">Category</label>
+        <input asp-for="Category" value="@Model.Category" />
+    </div>
+
+    <div>
+        <label asp-for="Title">Title</label>
+        <input asp-for="Title" value="@Model.Title"/>
+    </div>
+
+    <div>
+        <label asp-for="Year">Year</label>
+        <input asp-for="Year" value="@Model.Year"/>
+    </div>
+
+    <div>
+        <label asp-for="Director">Director</label>
+        <input asp-for="Director" value="@Model.Director" />
+    </div>
+
+    <div>
+        <label asp-for="Rating">Rating</label>
+        <select asp-for="Rating" value="@Model.Rating">
+            <option value="">Select One</option>
+            <option value="G">G</option>
+            <option value="PG">PG</option>
+            <option value="PG-13">PG-13</option>
+            <option value="R">R</option>
+        </select>
+    </div>
+
+    <div>
+        <label asp-for="Edited">Edited</label>
+        <select asp-for="Edited" value="@Model.Edited">
+            <option value="False">No</option>
+            <option value="True">Yes</option>
+        </select>
+    </div>
+
+    <div>
+        <label asp-for="Lent">Lent To</label>
+        <input asp-for="Lent" value="@Model.Lent"/>
+    </div>
+
+    <div>
+        <label asp-for="Notes">Notes</label>
+        <input asp-for="Notes" value="@Model.Notes"/>
+    </div>
+    <br />
+    <button type="submit">Save Changes</button>
+    <div asp-validation-summary="All"></div>
+</form>

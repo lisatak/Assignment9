@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>John Hilton Film Collection</title>
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Play:wght@700&display=swap" rel="stylesheet">
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+</head>
+
+<body>
+    <!--Navigation Bar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand ml-2" href="/">JH Film Collection</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="MovieCollection">Film Collection</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="MovieForm">Add a Movie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" asp-action="Podcast">Podcast</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!--Header-->
+    <header class="card-header text-center">
+        <h1>@ViewBag.Title</h1>
+    </header>
+    <br /><br />
+
+    <!--Body, footer-->
+    <div class="text-center">
+        @RenderBody()
+        <br />
+        <br />
+        <footer>Copyright 2021</footer>
+    </div>
+</body>
+
+
+</html>
